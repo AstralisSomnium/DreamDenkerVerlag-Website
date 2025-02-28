@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
     <title>Dream Denker - Verlag</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background: url('header.webp') no-repeat center center/cover; color: white; text-align: center; padding: 80px 20px; }
-        header { color: white; text-align: center; padding: 80px 20px; }
+        header { background: url('header.jpg') no-repeat center center/cover; color: white; text-align: center; padding: 80px 20px; }
+        header2 { color: white; text-align: center; padding: 80px 20px; }
         .container { width: 90%; max-width: 900px; margin: auto; padding: 20px; }
         h2 { color: #333; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
         .books, .team { display: flex; flex-wrap: wrap; justify-content: space-between; }
@@ -32,18 +33,20 @@
             <div class="book">
                 <img src="book1.jpg" alt="Buch 1">
                 <p>Thailand Reiseführer (deutsch)</p>
+                <p>ISBN: 978-9916-4-2445-2</p>
             </div>
             <div class="book">
                 <img src="book2.jpg" alt="Buch 2">
                 <p>Thailand Reiseführer (italienisch)</p>
+                <p>ISBN: 978-9916-4-2850-4</p>
             </div>
         </div>
 
         <h2>👥 Unser Team</h2>
         <div class="team">
-            <div class="team-member"><strong>Patrick Gruber</strong><br>CEO</div>
+            <div class="team-member"><strong>Patrick Gruber</strong><br>Strategie</div>
             <div class="team-member"><strong>Denise Gahn</strong><br>Layout Designer</div>
-            <div class="team-member"><strong>Marie Becker</strong><br>Cover Designer</div>
+            <div class="team-member"><strong>Marie Becker</strong><br>Cover Designer</div>  
             <div class="team-member"><strong>Franziska Obier</strong><br>Autorin</div>
             <div class="team-member"><strong>Stephanie Pinkowsky</strong><br>Autorin</div>
             <div class="team-member"><strong>Tobias Fleck</strong><br>Korrektorat</div>
@@ -61,11 +64,14 @@
     <div class="cookie-banner" id="cookieBanner">
         Diese Website verwendet Cookies. <button onclick="acceptCookies()">OK</button>
     </div>
-
+    
     <script>
-        if (!localStorage.getItem("cookiesAccepted")) {
-            document.getElementById("cookieBanner").style.display = "block";
-        }
+        document.addEventListener("DOMContentLoaded", function() {
+            if (!localStorage.getItem("cookiesAccepted")) {
+                document.getElementById("cookieBanner").style.display = "block";
+            }
+        });
+    
         function acceptCookies() {
             localStorage.setItem("cookiesAccepted", "true");
             document.getElementById("cookieBanner").style.display = "none";
